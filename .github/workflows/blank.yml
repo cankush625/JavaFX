@@ -15,7 +15,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        
-    - name: Setup Java Action
-      uses: actions/setup-java@v1.0.0
 
