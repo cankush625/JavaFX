@@ -1,0 +1,25 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+
+<!-- HBox fills all the window-->
+<!-- HBox is normally used for dialogue box window-->
+<HBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"
+        style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed"
+        spacing="10"> <!-- Using css to style-->
+
+    <!-- Adding padding-->
+    <padding>
+        <Insets bottom="20" right="20"/>
+    </padding>
+
+    <Button text="Okay" prefWidth="90"/> <!-- Adding width to the button-->
+    <Button text="Cancel" prefWidth="90"/>
+    <Button text="Help" prefWidth="90"/>
+</HBox>
