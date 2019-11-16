@@ -1,0 +1,32 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center" hgap="10" vgap="10">
+
+<!--    Adding padding of 20px at the top of the first row-->
+    <padding>
+        <Insets top="20"/>
+    </padding>
+
+<!--    columnConstraints is used to define the properties for the column-->
+<!--    <columnConstraints>-->
+<!--        <ColumnConstraints percentWidth="50"/> &lt;!&ndash; Setting 50% width for first column &ndash;&gt;-->
+<!--        <ColumnConstraints percentWidth="50"/> &lt;!&ndash; Setting 50% width for second column &ndash;&gt;-->
+<!--    </columnConstraints>-->
+
+<!--    Adding buttons using button controller which is the child of the GridPane-->
+<!--    We need to add rowIndex and columnIndex to display buttons at unique place else they are overlapping-->
+<!--    Index order is not necessary for displaying the buttons-->
+    <Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"
+        GridPane.halignment="RIGHT"/> <!-- We can align the buttons within the cell using halignment-->
+    <Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Really long Button Four" GridPane.rowIndex="3" GridPane.columnIndex="0"
+        GridPane.columnSpan="2"/> <!-- We can span the column to make the large items occupy next column space-->
+    <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+</GridPane>
