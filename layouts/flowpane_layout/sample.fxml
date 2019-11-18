@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- FlowPane makes the elements responsive and displays all the content by adjusting-->
+<!-- If we use VBox or HBox instead of the FlowPane then if we reduce the application window size the content not fitted into the window
+is get omitted-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<FlowPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" orientation="HORIZONTAL"> <!-- FlowPane makes the layout and the elements inside it
+                        automatically responsive. As we declared orientation horizontal all the buttons are displayed horizontally-->
+    <Button text="One"/>
+    <Button text="Two"/>
+    <Button text="Three"/>
+    <Button text="Four"/>
+    <Button text="Five"/>
+    <Button text="Six"/>
+    <Button text="Seven"/>
+    <Button text="Eight"/>
+    <Button text="Nine"/>
+    <Button text="Ten"/>
+</FlowPane>
+
+<!-- Also there is a TilePane layout that gives us advantage over FlowPane is that, the TilePane adds the padding between the
+two elements like buttons by default which FlowPane never does by default-->
+
+<!-- Code for StackPane-->
+<!-- The order of the added element is matters i the StackPane because the last added element is on the top of the previously added.
+The StackPane follows the stack-->
+<!-- Its useful when we are working with the images and we have to add the label or text on the top of the image-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.layout.StackPane?>-->
+<!--<StackPane fx:controller="sample.Controller"-->
+<!--           xmlns:fx="http://javafx.com/fxml">-->
+<!--    <Button text="Button One"/>-->
+<!--    <Label text="The label text"/> &lt;!&ndash; This Label is displayed on the top of the Button because Label is added after the Button&ndash;&gt;-->
+<!--</StackPane>-->
+
+<!--by Ankush Chavan-->
