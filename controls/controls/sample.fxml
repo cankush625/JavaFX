@@ -1,0 +1,93 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me">
+        <!-- Adding graphics to the button that is image to the button-->
+        <!-- By default the icon is appearing at the left of the button text-->
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is the label"
+            textFill="blue" WrapText="true"> <!-- Wrapping the text that is text adjusted according to the window-->
+        <font>
+            <Font name="Arial italic"/>
+        </font>
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/Information24.gif"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <!-- Using radio buttons control-->
+    <!-- Radio buttons are by default not toggles. To make them toggle we need to add ToggleGroup-->
+    <fx:define>
+        <ToggleGroup fx:id="colorToggleGroup"/> <!-- Referring this id values in the radio buttons for color-->
+    </fx:define>
+    <!-- We can group the radio buttons by adding them inside the VBox or HBox-->
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="Red" toggleGroup="$colorToggleGroup"/>
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="Green" toggleGroup="$colorToggleGroup" selected="true"/>
+                                            <!-- Setting selected="true" to select the option at starting by default-->
+    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="Yellow" toggleGroup="$colorToggleGroup"/>
+
+    <!-- Using the checkbox control-->
+    <!-- To use checkboxes in group add them inside the VBox or HBox-->
+    <CheckBox text="Subscribe to our newsletter" GridPane.rowIndex="2"/>
+    <CheckBox text="Receive updates from us" GridPane.rowIndex="3" indeterminate="true"/> <!-- The indeterminate property
+                           displays little dash in the checkbox initially and once we clicked the box this dash disappears-->
+
+    <!-- Using toggle button to let toggle the button pressed and un-pressed-->
+    <!-- To use toggle buttons in group add them inside the VBox or HBox-->
+    <ToggleButton text="Toggle Button" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+
+    <!-- Adding TextField-->
+    <TextField GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <!-- Adding PasswordField-->
+    <PasswordField GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <!-- Adding ComboBox-->
+    <ComboBox GridPane.rowIndex="4" GridPane.columnIndex="1"> <!-- To increase the ComboBox size write "GridPane.columnSpan="2""-->
+                <!-- if we want user to add their own value to the ComboBox we can set editable="true" in the ComboBox-->
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <!-- Adding options to the ComboBox-->
+                <String fx:value="Option 1"/>
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+        <!-- Adding default value for the ComboBox-->
+        <value>
+            <String fx:value="Option 2"/>
+        </value>
+    </ComboBox>
+
+    <!-- Adding ChoiceBox-->
+    <!-- ChoiceBox is same as that of the ComboBox. The only difference is that it shows tick mark infront of the selected option-->
+    <ChoiceBox GridPane.rowIndex="4" GridPane.columnIndex="2"> <!-- To increase the ChoiceBoc size write "GridPane.columnSpan="2""-->
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <!-- Adding options to the ComboBox-->
+                <String fx:value="Option 1"/>
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+        <!-- Adding default value for the ChoiceBox-->
+        <value>
+            <String fx:value="Option 2"/>
+        </value>
+    </ChoiceBox>
+</GridPane>
