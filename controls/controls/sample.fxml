@@ -90,7 +90,7 @@
             <String fx:value="Option 2"/>
         </value>
     </ChoiceBox>
-
+  
     <!-- Using Slider-->
     <!-- When we are dealing with numbers Sliders are very useful. They let us display a sliding bar with the range of number counts-->
     <Slider GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
