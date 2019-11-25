@@ -115,4 +115,27 @@
     <!-- Using DatePicker-->
     <!-- DatePicker is used to pick the date from the calender appears their depends on the platform we use-->
     <DatePicker GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <!-- Using TitledPane-->
+    <!-- When we clicked on it, it displays the content and if we click again ot will hide the content-->
+    <!-- It is mostly used in the accordion where, we are able to open only one tab at one time-->
+    <TitledPane text="TitledPane" GridPane.rowIndex="7" GridPane.columnIndex="0">
+        <Label text="This is the TitledPane label"/>
+    </TitledPane>
+
+    <!-- Using TitledPane with Accordion-->
+    <Accordion GridPane.rowIndex="7" GridPane.columnIndex="1"
+        expandedPane="$tp2"> <!-- tp2 id is reference and expanded to show the content by default at startup-->
+        <panes>
+            <TitledPane text="TitledPane1">
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+            <TitledPane fx:id="tp2" text="TitledPane2"> <!-- fx:id is used to reference this item-->
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+            <TitledPane text="TitledPane3">
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
 </GridPane>
