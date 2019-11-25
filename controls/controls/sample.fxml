@@ -90,4 +90,52 @@
             <String fx:value="Option 2"/>
         </value>
     </ChoiceBox>
+  
+    <!-- Using Slider-->
+    <!-- When we are dealing with numbers Sliders are very useful. They let us display a sliding bar with the range of number counts-->
+    <Slider GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="4" min="0" max="100"
+            showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
+                    <!-- min and max sets the minimum and maximum range of the numbers on the bar
+                         showTickLabels is used to show the range of the numbers
+                         showTickMarks is used to show the ticks between the two numbers. Initially there are 3 ticks between two no.s
+                         minorTickCount is used to set the number of ticks between the two numbers
+                         snapToTicks is used to let the slider pointer automatically set to the nearest tick-->
+
+    <!-- Using Spinner-->
+    <!-- Spinner is used to get the more precise value than that of the Slider-->
+    <Spinner GridPane.rowIndex="5" GridPane.columnIndex="4" min="0" max="100"
+            editable="true" initialValue="37"/> <!-- min and max is used to set the range of numbers
+                                                     editable is used to let the user type to enter the value within range
+                                                     initialValue is used to set the initial value of the spinner-->
+
+    <!-- Using ColorPicker-->
+    <!-- ColorPicker is used to pick the color from the pallet of colors-->
+    <ColorPicker GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+
+    <!-- Using DatePicker-->
+    <!-- DatePicker is used to pick the date from the calender appears their depends on the platform we use-->
+    <DatePicker GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <!-- Using TitledPane-->
+    <!-- When we clicked on it, it displays the content and if we click again ot will hide the content-->
+    <!-- It is mostly used in the accordion where, we are able to open only one tab at one time-->
+    <TitledPane text="TitledPane" GridPane.rowIndex="7" GridPane.columnIndex="0">
+        <Label text="This is the TitledPane label"/>
+    </TitledPane>
+
+    <!-- Using TitledPane with Accordion-->
+    <Accordion GridPane.rowIndex="7" GridPane.columnIndex="1"
+        expandedPane="$tp2"> <!-- tp2 id is reference and expanded to show the content by default at startup-->
+        <panes>
+            <TitledPane text="TitledPane1">
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+            <TitledPane fx:id="tp2" text="TitledPane2"> <!-- fx:id is used to reference this item-->
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+            <TitledPane text="TitledPane3">
+                <Label text="This the Accordion demo"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
 </GridPane>
